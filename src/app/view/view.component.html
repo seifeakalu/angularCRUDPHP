@@ -1,0 +1,25 @@
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of students">
+      <th scope="row">1</th>
+      <td>{{ std.fName }}</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td scope="col">
+        <button class="btn btn-success" (click)="edit(std)">Edit</button>
+      </td>
+      <td scope="col">
+        <button class="btn btn-danger" (click)="delete(std)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a routerLink="/add" class="btn btn-primary">Add New Students</a>
